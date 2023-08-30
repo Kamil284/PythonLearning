@@ -22,6 +22,12 @@ while True:
 
     print("Trwa losowanie...")
 
-
+    print("3...")
+    time.sleep(0.5)
+    print("2...")
+    time.sleep(0.5)
+    print("1...")
+    time.sleep(0.5)
+    print(orzelReszka(50))
 
     print("Chesz rzucić ponownie? Tak/Nie")

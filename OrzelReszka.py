@@ -9,7 +9,7 @@ def orzelReszka(szansaNaTrafienie): #definiowanie funkcji do losowania dwoch zmi
     else:
         return "Reszka"
 
-print("Chcesz rozpocząć? Tak/Nie")
+print("Czy chcesz rozpocząć? Tak/Nie")
 
 while True:
 
@@ -30,4 +30,4 @@ while True:
     time.sleep(0.5)
     print(orzelReszka(50))
 
-    print("Chesz rzucić ponownie? Tak/Nie")
+    print("Czy chcesz rzucić ponownie? Tak/Nie")

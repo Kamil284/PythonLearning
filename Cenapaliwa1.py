@@ -1,45 +1,18 @@
-def koszt_drogi(km, sp, cp):  # km=ilosc kilometrow sp=spalanie na 100km cp=cena paliwa
-    return km / sp * cp
+def trasa():
+    try:
+        ilosc_pasazerow = int(input("Podaj liczbę pasażerów: "))
+        dystans = float(input("Podj dystans w kilometrach: "))
+        spalanie = float(input("Podaj średnie spalanie samochodu w litrach: "))
+        cena_paliwa = float(input("Podaj cene za litr paliwa w PLN: "))
+
+        koszt_paliwa = (dystans / 100) * spalanie * cena_paliwa
+        koszt_na_osobe = koszt_paliwa / ilosc_pasazerow
+
+    except ValueError:
+        print("Wprowadzone dane są błędne!")
+
+        print(f"Koszt przejazdu wynosi: {round(koszt_paliwa, 2)} zł.")
+        print(f"Koszt przejazdu na osobe wynosi: {round(koszt_na_osobe, 2)} zł.")
 
 
-def ilosc_osob(km, sp, cp, os):  ##km=ilosc kilometrow sp=spalanie na 100km cp=cena paliwa os=ilosc osob
-    return (km / sp * cp) / os
-
-
-while (True):
-    print('"Wybierz:\n"1" jeżeli jedziesz sam!\n"2" jeżeli jedziesz z kimś!\n"STOP" aby zamknąć program')
-    wybor = input("Wprowadz liczbe: ")
-    if wybor == "1":
-        km = float(input("Wprowadz ilość kilometrów do przejechania: "))
-        sp = float(input("Wprowadz spalanie na 100km: "))
-        cp = float(input("Wprowadz cene paliwa za jeden litr w PLN: "))
-        print("Kosz przejchania tej trasy wynosi", round(koszt_drogi(km, sp, cp), 2))
-        next = input("Czy chcesz wprowadzić dane jeszcze raz? TAK / NIE \n")
-        if next.upper() == "TAK":
-            print("Okej więc jeszcze raz!")
-            continue
-        elif next.upper() == "NIE":
-            print("Miłej i bezpiecznej drogi!")
-            break
-        else:
-            print("Brak poprawnej odpowiedzi")
-            continue
-    elif wybor == "2":
-        km = float(input("Wprowadz ilość kilometrów do przejechania: "))
-        sp = float(input("Wprowadz spalanie na 100km: "))
-        cp = float(input("Wprowadz cene paliwa za jeden litr w PLN: "))
-        os = float(input("Wprowadz liczbe osób w samochodzie: "))
-        print("Kosz przejchania tej trasy dla", int(os), "osób wynosi", round(ilosc_osob(km, sp, cp, os), 2),
-              "na osobe")
-        next = input("Czy chcesz wprowadzić dane jeszcze raz? TAK / NIE \n")
-        if next.upper() == "TAK":
-            print("Okej więc jeszcze raz!")
-            continue
-        elif next.upper() == "NIE":
-            print("Miłej i bezpiecznej drogi!")
-            break
-    elif wybor.upper() == "STOP":
-        break
-    else:
-        print("Nie wybrałeś poprawnej opcji.\n" "Spróbuj ponownie!\n")
-        continue
+trasa()

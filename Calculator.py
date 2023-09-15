@@ -19,13 +19,3 @@ elif wybor == '^':
     print(a ** b)
 else:
     print("Nie wybrałeś zadnej z możliwych opcji, spróbuj ponownie")
-
-x = int(input("wprowadz liczbe "))
-if x < 0:
-    x = -x
-    print(x)
-elif x >= 0:
-    print(x)
-if (5 > 7):
-    print("first ")
-    print("second")

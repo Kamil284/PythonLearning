@@ -8,11 +8,11 @@ def trasa():
         koszt_paliwa = (dystans / 100) * spalanie * cena_paliwa
         koszt_na_osobe = koszt_paliwa / ilosc_pasazerow
 
-    except ValueError:
-        print("Wprowadzone dane są błędne!")
-
         print(f"Koszt przejazdu wynosi: {round(koszt_paliwa, 2)} zł.")
         print(f"Koszt przejazdu na osobe wynosi: {round(koszt_na_osobe, 2)} zł.")
+
+    except ValueError:
+        print("Wprowadzone dane są błędne!")
 
 
 trasa()

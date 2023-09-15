@@ -1,5 +1,5 @@
 class User:
-    def __init__(self, name, surname, date_birth):
+    def __init__(self, name: str, surname: str, date_birth: int):
         self.name = name
         self.surname = surname
         self.date_birth = date_birth

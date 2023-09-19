@@ -12,7 +12,7 @@ def trasa():
         print(f"Koszt przejazdu na osobe wynosi: {round(koszt_na_osobe, 2)} zł.")
 
     except ValueError:
-        print("Wprowadzone dane są błędne!")
+        print("Wprowadzone dane są nieprawidłowe!")
 
 
 trasa()
